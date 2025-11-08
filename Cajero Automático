@@ -1,0 +1,31 @@
+Proceso Cajero_Automatico
+	Definir saldo, retiro Como Real
+	Definir respuesta Como Caracter
+	
+	saldo <- 100000  // saldo inicial
+	respuesta <- "S"
+	
+	Mientras respuesta = "S" o respuesta = "s" Hacer
+		Escribir "Su saldo actual es: ", saldo
+		Escribir "Ingrese el monto que desea retirar: "
+		Leer retiro
+		
+		Si retiro > saldo Entonces
+			Escribir "Error: el monto excede el saldo disponible."
+		SiNo
+			saldo <- saldo - retiro
+			Escribir "Retiro exitoso."
+			Escribir "Su nuevo saldo es: ", saldo
+		FinSi
+		
+		Si saldo > 0 Entonces
+			Escribir "Desea realizar otro retiro? (S/N): "
+			Leer respuesta
+		SiNo
+			Escribir "Saldo insuficiente. No puede realizar más retiros."
+			respuesta <- "N"
+		FinSi
+	FinMientras
+	
+	Escribir "Gracias por usar el cajero automático."
+FinProceso
