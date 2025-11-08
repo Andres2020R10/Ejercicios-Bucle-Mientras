@@ -1,0 +1,20 @@
+Proceso Impresora
+	Definir paginas_totales, paginas_imprimir Como Entero
+	paginas_totales <- 50  // capacidad inicial de papel
+	
+	Mientras paginas_totales > 0 Hacer
+		Escribir "La impresora tiene ", paginas_totales, " paginas disponibles."
+		Escribir "Ingrese la cantidad de paginas que desea imprimir: "
+		Leer paginas_imprimir
+		
+		Si paginas_imprimir > paginas_totales Entonces
+			Escribir "Error: no hay suficiente papel."
+		SiNo
+			paginas_totales <- paginas_totales - paginas_imprimir
+			Escribir "Imprimiendo ", paginas_imprimir, " paginas..."
+			Escribir "Paginas restantes: ", paginas_totales
+		FinSi
+	FinMientras
+	
+	Escribir "No hay suficiente papel para seguir imprimiendo."
+FinProceso
