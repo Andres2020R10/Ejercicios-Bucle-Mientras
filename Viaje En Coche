@@ -1,0 +1,20 @@
+Proceso Viaje_En_Coche
+	Definir distancia, velocidad, tiempo Como Real
+	Definir continuar Como Caracter
+	continuar <- "S"
+	
+	Mientras continuar = "S" o continuar = "s" Hacer
+		Escribir "Ingrese la distancia total del viaje (en km): "
+		Leer distancia
+		Escribir "Ingrese la velocidad promedio del coche (en km/h): "
+		Leer velocidad
+		
+		tiempo <- distancia / velocidad
+		
+		Escribir "El tiempo estimado de viaje es: ", tiempo, " horas."
+		Escribir "Desea simular otro viaje? (S/N): "
+		Leer continuar
+	FinMientras
+	
+	Escribir "Fin de la simulacion de viajes."
+FinProceso
