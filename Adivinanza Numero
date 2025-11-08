@@ -1,0 +1,22 @@
+Proceso Juego_Adivinanza
+	Definir numero_secreto, intento Como Entero
+	Definir encontrado Como Logico
+	encontrado <- Falso
+	numero_secreto <- Aleatorio(100)
+	
+	Mientras encontrado = Falso Hacer
+		Escribir "Adivine el numero (entre 1 y 100): "
+		Leer intento
+		
+		Si intento = numero_secreto Entonces
+			Escribir "¡Felicidades! Adivinó el numero."
+			encontrado <- Verdadero
+		SiNo
+			Si intento < numero_secreto Entonces
+				Escribir "El numero secreto es mayor."
+			SiNo
+				Escribir "El numero secreto es menor."
+			FinSi
+		FinSi
+	FinMientras
+FinProceso
